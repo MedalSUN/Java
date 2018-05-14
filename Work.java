@@ -114,6 +114,70 @@ public class Work {
 			System.out.println();
 		}
 		
+		/*
+		 * =====test5
+		 * 要求输出一个菱形图案====每行个数为1357  5  3  1
+		 * 
+		int i = 1;
+		while (i<=7)
+		{
+			int f=1;
+			int k=0;
+			int j=1;
+			int p=0;
+			if (i<=4) {
+				k=2*(4-i);
+				p=2*i-1;
+			}else {
+				k=2*i-8;
+				p=2*(8-i)-1;
+			}
+			while (f<=k){
+				System.out.print(" ");
+				f++;
+			}
+			while (j<=p){
+				System.out.print("*"+" ");
+				j++;
+			}
+			i++;
+			System.out.println();
+		}
+		
+		
+		//代码重构，上边的是简便代码。下边的将前四个分开来讨论了
+		int i=1;
+		while(i<=4){
+			int j=1;
+			while(j<=i+3){
+				//区别什么时候需要打印空格 什么时候需要打印*
+				if(j<=4-i){
+					System.out.print(" ");
+				}else{
+					System.out.print("*");
+				}
+				j++;
+			}
+			//行结束的时候需要换行
+			System.out.println();
+			i++;
+		}
+		while (i>4 && i<=7) {
+			int j=1;
+			while(j<=(8-i)+3){
+				//区别什么时候需要打印空格 什么时候需要打印*
+				if(j<=4-(8-i)){
+					System.out.print(" ");
+				}else{
+					System.out.print("*");
+				}
+				j++;
+			}
+			//行结束的时候需要换行
+			System.out.println();
+			i++;
+			
+		}
 		
 		
 		
